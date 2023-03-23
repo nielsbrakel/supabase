@@ -71,7 +71,7 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=YOUR_SUPABASE_ANON_KEY
 >
 <TabPanel id="js" label="JavaScript">
 
-Middleware runs immediately before each route in rendered. Next.js only provides read access to headers and cookies in Server Components and Route Handlers, however, Supabase needs to be able to set cookies and headers to refresh expired access tokens. Therefore, you must call the `getSession` function in `middleware.js` in order to use a Supabase client in Server Components or Route Handlers.
+Middleware runs immediately before each route is rendered. Next.js only provides read access to headers and cookies in Server Components and Route Handlers, however, Supabase needs to be able to set cookies and headers to refresh expired access tokens. Therefore, you must call the `getSession` function in `middleware.js` in order to use a Supabase client in Server Components or Route Handlers.
 
 Create a new `middleware.js` file in the root of your project and populate with the following:
 
