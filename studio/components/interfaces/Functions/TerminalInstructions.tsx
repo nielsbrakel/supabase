@@ -23,7 +23,7 @@ const TerminalInstructions: FC<Props> = ({ closable = false, removeBorder = fals
   const apiService = settings?.autoApiService
   const anonKey = apiService?.service_api_keys.find((x) => x.name === 'anon key')
     ? apiService.defaultApiKey
-    : undefined
+    : '[YOUR ANON KEY]'
   const endpoint = settings?.autoApiService.app_config.endpoint ?? ''
 
   const endpointSections = endpoint.split('.')
@@ -143,7 +143,7 @@ const TerminalInstructions: FC<Props> = ({ closable = false, removeBorder = fals
               href="https://github.com/supabase/supabase/tree/master/examples/edge-functions/supabase/functions"
             >
               <a target="_blank" rel="noreferrer">
-                <Button as="a" type="default" iconRight={<IconCode />}>
+                <Button type="default" iconRight={<IconCode />}>
                   Examples
                 </Button>
               </a>
